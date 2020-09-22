@@ -1,4 +1,6 @@
 # vro-package-diff-action
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flrivallain%2Fvro-package-diff-action.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Flrivallain%2Fvro-package-diff-action?ref=badge_shield)
+
 Github action using vro-package-diff python package to compare two VMware vRealize Orchestrator packages.
 
 # Inputs
@@ -48,3 +50,6 @@ steps:
         branch: prod
         repo_token: ${{ secrets.GITHUB_TOKEN }}
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flrivallain%2Fvro-package-diff-action.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Flrivallain%2Fvro-package-diff-action?ref=badge_large)
