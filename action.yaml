@@ -1,0 +1,26 @@
+# action.yaml
+name: 'vRO Diff Check'
+description: 'Github action using vro-package-diff python package to compare two VMware vRealize Orchestrator packages.'
+branding:
+  icon: 'archive'
+  color: 'green'
+
+inputs:
+  branch:
+    description: 'Branch of the reference package to test against'
+    required: False
+    default: 'master'
+  package_path:
+    description: 'Path of the package to test'
+    required: True
+
+outputs:
+  output:
+    description: 'Number of potential import errors due to unresolved conflicts or non-empty configuration elements.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.branch }}
+    - ${{ inputs.package_path }}
